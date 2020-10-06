@@ -1,11 +1,19 @@
 package com.jac.evaluacionpractica;
 
-public class Categoria {
-    int codigo;
-    String nom_categoria;
-    int estado_categoria;
+import java.io.Serializable;
+
+public class Categoria implements Serializable {
+    private int codigo;
+    private String nombreCategoria;
+    private int estado;
 
     public Categoria() {
+    }
+
+    public Categoria(int codigo, String nombreCategoria, int estado) {
+        this.codigo = codigo;
+        this.nombreCategoria = nombreCategoria;
+        this.estado = estado;
     }
 
     public int getCodigo() {
@@ -16,19 +24,19 @@ public class Categoria {
         this.codigo = codigo;
     }
 
-    public String getNom_categoria() {
-        return nom_categoria;
+    public String getNombreCategoria() {
+        return nombreCategoria;
     }
 
-    public void setNom_categoria(String nom_categoria) {
-        this.nom_categoria = nom_categoria;
+    public void setNombreCategoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
     }
 
-    public int getEstado_categoria() {
-        return estado_categoria;
+    public int getEstado() {
+        return estado;
     }
 
-    public void setEstado_categoria(int estado_categoria) {
-        this.estado_categoria = estado_categoria;
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
 }

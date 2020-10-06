@@ -1,46 +1,94 @@
 package com.jac.evaluacionpractica;
 
-import java.security.Timestamp;
+import android.database.sqlite.SQLiteDatabase;
+import java.io.Serializable;
 
-public class Producto { int id_producto;
-    String nom_producto;
-    String des_producto;
-    float stock;
-    float precio;
-    String unidad_de_medida;
-    int estado_producto;
-    int codigo;
-    Timestamp fecha_entrada;
+public class Producto implements Serializable {
+    private int codigo;
+    private String nombreProducto;
+    private String descripcion;
+    private double stock;
+    private double precio;
+    private String unidadMedida;
+    private int estadoProd;
+    private String categoria;
 
 
-    public int getId_producto() {
-        return id_producto;
+    public Producto() {
     }
 
-    public void setId_producto(int id_producto) {this.id_producto = id_producto;}
+    public Producto(int codigo, String nombreProducto, String descripcion, double stock, double precio, String unidadMedida, int estadoProd, String categoria) {
+        this.codigo = codigo;
+        this.nombreProducto = nombreProducto;
+        this.descripcion = descripcion;
+        this.stock = stock;
+        this.precio = precio;
+        this.unidadMedida = unidadMedida;
+        this.estadoProd = estadoProd;
+        this.categoria = categoria;
+    }
 
-    public String getNom_producto() {return nom_producto;}
-    public  void  setNom_producto(String nom_producto) {this.nom_producto = nom_producto;}
+    public int getCodigo() {
+        return codigo;
+    }
 
-    public String getDes_producto() {return des_producto;}
-    public void  setDes_producto(String des_producto) {this.des_producto = des_producto;}
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
 
-    public float getStock() {return stock;}
-    public void setStock(float stock) {this.stock = stock;}
+    public String getNombreProducto() {
+        return nombreProducto;
+    }
 
-    public float getPrecio() {return stock;}
-    public void setPrecio(float precio) {this.precio = precio;}
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
+    }
 
-    public String getUnidad_de_medida() {return nom_producto;}
-    public  void  setUnidad_de_medida(String unidad_de_medida) {this.unidad_de_medida = unidad_de_medida ;}
+    public String getDescripcion() {
+        return descripcion;
+    }
 
-    public int getEstado_producto() {return estado_producto;}
-    public void setEstado_producto(int estado_producto) {this.estado_producto = estado_producto;}
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
-    public int getCodigo() {return codigo;}
-    public void setCodigo(int codigo) {this.codigo = codigo;}
+    public double getStock() {
+        return stock;
+    }
 
-    public Timestamp getFecha_entrada() {return fecha_entrada;}
-    public void setFecha_entrada (Timestamp fecha_entrada) {this.fecha_entrada = fecha_entrada;}
+    public void setStock(double stock) {
+        this.stock = stock;
+    }
 
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public String getUnidadMedida() {
+        return unidadMedida;
+    }
+
+    public void setUnidadMedida(String unidadMedida) {
+        this.unidadMedida = unidadMedida;
+    }
+
+    public int getEstadoProd() {
+        return estadoProd;
+    }
+
+    public void setEstadoProd(int estadoProd) {
+        this.estadoProd = estadoProd;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 }
