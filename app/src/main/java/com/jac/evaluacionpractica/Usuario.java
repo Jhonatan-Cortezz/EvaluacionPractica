@@ -1,54 +1,47 @@
 package com.jac.evaluacionpractica;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 
-public class Usuario implements Serializable{
-    int id;
-    String nombre;
-    String apellido;
-    String correo;
-    String usuario;
-    String clave;
-    int tipo;
-    int estado;
-    String pregunta;
-    String respuesta;
-    Timestamp fecha_registro;
+public class Usuario implements Serializable {
+    private int codigoUsuario;
+    private String nombreUsuario;
+    private String apellido;
+    private String correo;
+    private String usuario;
+    private String clave;
+    private int estado;
+    private String pregunta;
+    private String respuesta;
 
-    public Usuario(){
-
+    public Usuario() {
     }
 
-
-    public Usuario(int id, String nombre, String apellido, String correo, String usuario, String clave, int tipo, int estado, String pregunta, String respuesta, Timestamp fecha_registro) {
-        this.id = id;
-        this.nombre = nombre;
+    public Usuario(int codigoUsuario, String nombreUsuario, String apellido, String correo, String usuario, String clave, int estado, String pregunta, String respuesta) {
+        this.codigoUsuario = codigoUsuario;
+        this.nombreUsuario = nombreUsuario;
         this.apellido = apellido;
         this.correo = correo;
         this.usuario = usuario;
         this.clave = clave;
-        this.tipo = tipo;
         this.estado = estado;
         this.pregunta = pregunta;
         this.respuesta = respuesta;
-        this.fecha_registro = fecha_registro;
     }
 
-    public int getId() {
-        return id;
+    public int getCodigoUsuario() {
+        return codigoUsuario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCodigoUsuario(int codigoUsuario) {
+        this.codigoUsuario = codigoUsuario;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getApellido() {
@@ -83,14 +76,6 @@ public class Usuario implements Serializable{
         this.clave = clave;
     }
 
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
     public int getEstado() {
         return estado;
     }
@@ -113,13 +98,5 @@ public class Usuario implements Serializable{
 
     public void setRespuesta(String respuesta) {
         this.respuesta = respuesta;
-    }
-
-    public Timestamp getFecha_registro() {
-        return fecha_registro;
-    }
-
-    public void setFecha_registro(Timestamp fecha_registro) {
-        this.fecha_registro = fecha_registro;
     }
 }
