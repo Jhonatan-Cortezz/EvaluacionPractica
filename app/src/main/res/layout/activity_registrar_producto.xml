@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarProducto">
+
+    <EditText
+        android:id="@+id/codPro"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="codigo producto" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/nomProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nombre producto" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/descripcionProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="descripcion" />
+
+    <Spinner
+        android:layout_marginTop="15dp"
+        android:id="@+id/selectCategoria"
+        android:spinnerMode="dropdown"
+        android:paddingTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stock" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/unidadM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="unidad de medida" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/estadoProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="estado producto" />
+
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/registraProd"
+        android:text="Guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

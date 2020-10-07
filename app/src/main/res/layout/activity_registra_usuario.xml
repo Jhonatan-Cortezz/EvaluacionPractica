@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".RegistraUsuario">
+
+    <EditText
+        android:id="@+id/codUse"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="codigo usuario" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/nomUse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nombre usuario" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/apellidoUse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="apellido usuario" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/correoUsu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="correo usuario" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/tipoUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/clave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/estadoUsu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="estado usuario" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/pregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="pregunta" />
+
+    <EditText
+        android:paddingTop="20dp"
+        android:id="@+id/respuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="respuesta" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/registraUsu"
+        android:text="Guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#e0e0e0"
+    tools:context=".ListViewCategorias">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#e0e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="LISTADO DE ARTICULOS REGISTRADOS"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <SearchView
+            android:id="@+id/searchViewCat"
+            android:queryHint="Buscar"
+            android:iconifiedByDefault="false"
+            android:layout_width="match_parent"
+            android:background="#d1c4e9"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/newCategoria"
+            android:text="Nueva Categoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstCategorias"
+        android:layout_marginTop="155dp"
+        android:layout_marginBottom="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
