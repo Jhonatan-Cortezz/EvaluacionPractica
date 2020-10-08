@@ -3,79 +3,118 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="10dp"
+    android:padding="40dp"
+    android:background="#DAF8AF40"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".RegistraUsuario">
 
-    <EditText
-        android:id="@+id/codUse"
-        android:layout_gravity="center_horizontal"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="codigo usuario" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/nomUse"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="nombre usuario" />
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/apellidoUse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="apellido usuario" />
+        <EditText
+            android:id="@+id/codUse"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="number"
+            android:background="@drawable/redondo"
+            android:hint="codigo usuario" />
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/correoUsu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="correo usuario" />
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/nomUse"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/redondo"
+            android:hint="nombre usuario" />
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/tipoUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Usuario" />
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_height="30dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/redondo"
+            android:id="@+id/apellidoUse"
+            android:layout_width="match_parent"
+            android:hint="apellido usuario" />
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/clave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password" />
+        <EditText
+            android:id="@+id/correoUsu"
+            android:layout_marginTop="20dp"
+            android:layout_height="30dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/redondo"
+            android:layout_width="match_parent"
+            android:hint="correo usuario" />
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/estadoUsu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="estado usuario" />
+        <EditText
+            android:id="@+id/tipoUsuario"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="30dp"
+            android:inputType="text"
+            android:background="@drawable/redondo"
+            android:hint="Usuario" />
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/pregunta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="pregunta" />
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/clave"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/redondo"
+            android:hint="password" />
 
-    <EditText
-        android:paddingTop="20dp"
-        android:id="@+id/respuesta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="respuesta" />
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/estadoUsu"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="number"
+            android:background="@drawable/redondo"
+            android:hint="estado usuario" />
 
-    <Button
-        android:layout_marginTop="30dp"
-        android:id="@+id/registraUsu"
-        android:text="Guardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="text"
+            android:background="@drawable/redondo"
+            android:hint="pregunta" />
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/respuesta"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="text"
+            android:background="@drawable/redondo"
+            android:hint="respuesta" />
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/registraUsu"
+            android:text="Guardar"
+            android:padding="20dp"
+            android:drawablePadding="0dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_save"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

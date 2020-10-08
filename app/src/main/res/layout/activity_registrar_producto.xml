@@ -3,66 +3,81 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="10dp"
+    android:padding="40dp"
+    android:background="#DAF8AF40"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".RegistrarProducto">
 
     <EditText
         android:id="@+id/codPro"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/redondo"
         android:hint="codigo producto" />
 
     <EditText
-        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/nomProd"
+        android:inputType="textPersonName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/redondo"
         android:hint="nombre producto" />
 
     <EditText
-        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/descripcionProd"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/redondo"
         android:hint="descripcion" />
 
     <Spinner
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/selectCategoria"
         android:spinnerMode="dropdown"
-        android:paddingTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="30dp"
+        android:background="@drawable/redondo"/>
 
     <EditText
-        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/stock"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/redondo"
         android:hint="Stock" />
 
     <EditText
-        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/precio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/redondo"
         android:hint="Precio" />
 
     <EditText
-        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/unidadM"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="text"
+        android:background="@drawable/redondo"
         android:hint="unidad de medida" />
 
     <EditText
-        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/estadoProd"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:background="@drawable/redondo"
         android:hint="estado producto" />
 
 
@@ -71,7 +86,13 @@
         android:layout_marginTop="30dp"
         android:id="@+id/registraProd"
         android:text="Guardar"
-        android:layout_width="wrap_content"
+        android:drawablePadding="0dp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:textColor="@android:color/white"
+        android:drawableStart="@drawable/ic_save"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

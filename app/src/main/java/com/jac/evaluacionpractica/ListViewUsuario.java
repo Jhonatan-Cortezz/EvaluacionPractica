@@ -26,6 +26,7 @@ public class ListViewUsuario extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_usuario);
+        setTitle("Usuarios");
 
         listViewUsuario = findViewById(R.id.lstUsuario);
         searchView = findViewById(R.id.searchViewUse);

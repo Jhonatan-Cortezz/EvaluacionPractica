@@ -33,6 +33,7 @@ public class RegistrarProducto extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_producto);
+        setTitle("Registro de Productos");
 
         edtCodigo = findViewById(R.id.codPro);
         edtNombre = findViewById(R.id.nomProd);

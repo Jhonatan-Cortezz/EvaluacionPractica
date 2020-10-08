@@ -28,6 +28,7 @@ public class RegistrarCategoria extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_categoria);
+        setTitle("Registro de Categorias");
 
         edtCodigo = findViewById(R.id.codCate);
         edtNombre = findViewById(R.id.nomCat);

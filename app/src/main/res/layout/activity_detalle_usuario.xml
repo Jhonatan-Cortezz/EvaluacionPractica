@@ -24,7 +24,7 @@
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             card_view:cardUseCompatPadding="true"
-            android:elevation="4dp"
+            android:elevation="7dp"
             card_view:cardCornerRadius="3dp"
             android:layout_margin="6dp"
             android:layout_height="wrap_content"
@@ -35,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearOne"
                 android:orientation="vertical"
+                android:background="#FBF7D4"
                 android:padding="6dp"
                 android:gravity="center">
 
@@ -52,9 +53,11 @@
 
                     <TextView
                         android:id="@+id/tvInformId"
-                        android:textColor="#000"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@android:color/white"
                         android:text="Resultado de la Busqueda"
                         android:padding="5dp"
+                        android:textSize="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -62,6 +65,7 @@
                 <TextView
                     android:id="@+id/tvUserName"
                     android:text="Código"
+                    android:textColor="@android:color/black"
                     android:layout_marginTop="25dp"
                     android:textSize="22dp"
                     android:layout_width="wrap_content"
@@ -77,6 +81,7 @@
                 <TextView
                     android:id="@+id/userName1"
                     android:text="Nombre"
+                    android:textColor="@android:color/black"
                     android:textSize="22dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -91,6 +96,7 @@
                 <TextView
                     android:text="Apellido"
                     android:textSize="22dp"
+                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -102,6 +108,7 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
+                    android:textColor="@android:color/black"
                     android:text="Correo"
                     android:textSize="22dp"
                     android:layout_width="wrap_content"
@@ -117,6 +124,7 @@
                 <TextView
                     android:text="Usuario"
                     android:textSize="22dp"
+                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -130,6 +138,7 @@
                 <TextView
                     android:text="Clave"
                     android:textSize="22dp"
+                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -144,6 +153,7 @@
                 <TextView
                     android:text="Estado"
                     android:textSize="22dp"
+                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -158,6 +168,7 @@
                 <TextView
                     android:text="Pregunta"
                     android:textSize="22dp"
+                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -172,6 +183,7 @@
                 <TextView
                     android:text="Respuesta"
                     android:textSize="22dp"
+                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -192,6 +204,7 @@
                         android:id="@+id/btnEditarUsu"
                         android:layout_weight="1"
                         android:text="editar"
+                        android:background="@android:color/holo_blue_light"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
 
@@ -199,7 +212,10 @@
                         android:id="@+id/btnBorrarUsu"
                         android:layout_weight="1"
                         android:text="Borrar"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginLeft="15dp"
                         android:layout_width="0dp"
+                        android:textColor="@android:color/white"
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>

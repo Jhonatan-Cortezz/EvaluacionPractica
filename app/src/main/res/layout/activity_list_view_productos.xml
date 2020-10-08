@@ -42,6 +42,12 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/newProducto"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_add"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:background="@color/colorPrimary"
             android:text="Nuevo Producto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -50,7 +56,7 @@
 
     <ListView
         android:id="@+id/lstProducto"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="180dp"
         android:layout_marginBottom="35dp"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"

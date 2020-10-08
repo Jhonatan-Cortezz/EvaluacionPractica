@@ -16,6 +16,7 @@ public class DetalleProducto extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_producto);
+        setTitle("Detalle de Producto");
 
         tvCodigo = findViewById(R.id.tvCodigoProd);
         tvNombre = findViewById(R.id.tvNombreProd);

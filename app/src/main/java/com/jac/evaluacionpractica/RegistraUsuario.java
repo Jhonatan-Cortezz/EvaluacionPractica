@@ -31,6 +31,7 @@ public class RegistraUsuario extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registra_usuario);
+        setTitle("Registro de Usuarios");
 
         edtCodigo = findViewById(R.id.codUse);
         edtNombre = findViewById(R.id.nomUse);

@@ -1,7 +1,9 @@
 package com.jac.evaluacionpractica;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -13,7 +15,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private FABToolbarLayout morph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +24,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setTitle("Inventario JJTCL");
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        morph = findViewById(R.id.fabtoolbar);
+        View uno, dos, tres, cuatro, cinco;
+
+        fab.setOnClickListener(this);
+        uno = findViewById(R.id.uno);
+        dos = findViewById(R.id.dos);
+        tres = findViewById(R.id.tres);
+        cuatro = findViewById(R.id.cinco);
+
+        uno.setOnClickListener(this);
+        dos.setOnClickListener(this);
+        tres.setOnClickListener(this);
+        cuatro.setOnClickListener(this);
     }
 
     @Override
@@ -47,10 +57,44 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.recycler) {
+            Intent intent = new Intent(this, MyRecyclerView.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.about){
+            Intent intent = new Intent(this, About.class);
+            startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.fab){
+            morph.show();
+        }
+
+        switch (view.getId()) {
+            case R.id.uno:
+                Intent intent = new Intent(this, ListViewProductos.class);
+                startActivity(intent);
+                break;
+
+            case R.id.dos:
+                Intent cat = new Intent(this, ListViewCategorias.class);
+                startActivity(cat);
+                break;
+
+            case R.id.tres:
+                Intent use = new Intent(this, ListViewUsuario.class);
+                startActivity(use);
+                break;
+
+            case R.id.cinco:
+                morph.hide();
+                break;
+        }
     }
 }

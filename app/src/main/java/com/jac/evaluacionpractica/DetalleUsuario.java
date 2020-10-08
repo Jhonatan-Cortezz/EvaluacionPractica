@@ -17,6 +17,7 @@ public class DetalleUsuario extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_usuario);
+        setTitle("Detalle de Usuario");
 
         tvCodigo = findViewById(R.id.tvCodigoUsu);
         tvNombre = findViewById(R.id.tvNombreUsu);

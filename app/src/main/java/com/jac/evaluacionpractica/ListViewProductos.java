@@ -24,6 +24,7 @@ public class ListViewProductos extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_productos);
+        setTitle("Productos");
 
         listViewProductos = findViewById(R.id.lstProducto);
         searchViewProd = findViewById(R.id.searchViewProd);

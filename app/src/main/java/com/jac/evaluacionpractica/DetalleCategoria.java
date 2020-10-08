@@ -20,6 +20,7 @@ public class DetalleCategoria extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_categoria);
+        setTitle("Detalle de Categoria");
 
         tvCodigo = findViewById(R.id.tvCodigoCatDetalle);
         tvNombre = findViewById(R.id.tvNombreCatDetalle);

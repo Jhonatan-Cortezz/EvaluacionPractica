@@ -13,6 +13,13 @@ public class Producto implements Serializable {
     private int estadoProd;
     private String categoria;
 
+    //este constructor es para la gestion de datos del recyclerView
+    public Producto(int codigo, String nombreProducto, double precio, String categoria) {
+        this.codigo = codigo;
+        this.nombreProducto = nombreProducto;
+        this.precio = precio;
+        this.categoria = categoria;
+    }
 
     public Producto() {
     }

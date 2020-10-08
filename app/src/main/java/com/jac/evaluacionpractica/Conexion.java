@@ -15,6 +15,7 @@ import android.view.View;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 
 public class Conexion extends SQLiteOpenHelper {
@@ -177,7 +178,7 @@ public class Conexion extends SQLiteOpenHelper {
                 dto.setEstado(Integer.parseInt(fila.getString(2)));
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setIcon(R.drawable.ic_launcher_background);//poner un icono
+                builder.setIcon(R.drawable.ic_close);//poner un icono
                 builder.setTitle("Alerta");
                 builder.setMessage("¿Está seguro de borrar el registro? \nCódigo: " + dto.getCodigo() +
                         "\nNombre: " + dto.getNombreCategoria());
@@ -416,7 +417,7 @@ public class Conexion extends SQLiteOpenHelper {
                 dto.setRespuesta(fila.getString(8));
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setIcon(R.drawable.ic_launcher_background);//poner un icono
+                builder.setIcon(R.drawable.ic_close);//poner un icono
                 builder.setTitle("Alerta");
                 builder.setMessage("¿Está seguro de borrar el registro? \nCódigo: " + dto.getNombreUsuario() +
                         "\nNombre: " + dto.getNombreUsuario());
@@ -639,7 +640,7 @@ public class Conexion extends SQLiteOpenHelper {
                 dto.setCategoria(fila.getString(7));
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setIcon(R.drawable.ic_launcher_background);//poner un icono
+                builder.setIcon(R.drawable.ic_close);//poner un icono
                 builder.setTitle("Alerta");
                 builder.setMessage("¿Está seguro de borrar el registro? \nCódigo: " + dto.getCodigo() +
                         "\nNombre: " + dto.getNombreProducto());
@@ -768,5 +769,34 @@ public class Conexion extends SQLiteOpenHelper {
         return estado;
     }
 
+    //consulta para el login
+    public boolean loginUsuario(String usuario, String pass){
+        Usuario user = new Usuario();
+        String name = usuario;
+        String pw = pass;
+
+        Cursor fila = bd().rawQuery("select nombre, clave from usuario where nombre='" + name + "' and clave ='" + pw + "' ", null);
+
+        if (fila.getCount() > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    //metodo que realiza la consulta para el recyclerView
+    public List<Producto> mostrarProducto(){
+        SQLiteDatabase bd = this.getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT codigo, nombre, precio, codigo_categoria FROM articulos order by codigo desc", null);
+        List<Producto> productos = new ArrayList<>();
+        if (cursor.moveToFirst()){
+            do {
+                productos.add(new Producto(cursor.getInt(0), cursor.getString(1), cursor.getDouble(2), cursor.getString(3)));
+            } while (cursor.moveToNext());
+        }
+
+        return productos;
+    }
 }
 

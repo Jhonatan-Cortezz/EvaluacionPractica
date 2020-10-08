@@ -24,6 +24,7 @@ public class ListViewCategorias extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_categorias);
+        setTitle("Categorias");
 
         listViewCategoria = findViewById(R.id.lstCategorias);
         searchView = findViewById(R.id.searchViewCat);
@@ -70,4 +71,4 @@ public class ListViewCategorias extends AppCompatActivity implements View.OnClic
         Intent intent = new Intent(this, RegistrarCategoria.class);
         startActivity(intent);
     }
-}x
+}
